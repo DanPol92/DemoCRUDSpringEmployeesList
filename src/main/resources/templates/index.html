@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello to the main page</title>
+</head>
+<body>
+
+<p th:text="'Time on the server is: ' +${theDate}" />
+
+<br>
+<br>
+<a href="/list">View the list with current employees</a>
+<br>
+<br>
+<div sec:authorize="hasRole('ADMIN')"> <a href="/admin">Update list! </a></div>
+<br>
+<br>
+<a href="/logout">Logout</a>
+</body>
+</html>
